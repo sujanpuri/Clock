@@ -34,6 +34,13 @@ setInterval(() =>
     let dsc = document.querySelector('#dsec');
     dsc.innerHTML= s
     
-
+if(hr<=12)
+{
+document.querySelector('#ampm').innerHTML="Am";
+}
+else
+{
+document.queryselector('#ampm').innerHTML="Pm";
+}
 
 }, 1000);
