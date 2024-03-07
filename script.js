@@ -50,7 +50,7 @@ document.querySelector('#dmin').innerHTML="0" +m+ ":";
 
 if(s<=9)
 {
-document.querySelector('#dsec').innerHTML="0" +s+ ":";
+document.querySelector('#dsec').innerHTML="0"+s;
 }
 
 }, 1000);
