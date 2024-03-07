@@ -28,7 +28,7 @@ setInterval(() =>
     let s = time.getSeconds();
 
     let dhr= document.querySelector('#dhrs');
-    dhr.innerHTML= hr + ":";
+    dhr.innerHTML= hr%12 + ":";
     let dmn = document.querySelector('#dmin');
     dmn.innerHTML= m + ":";
     let dsc = document.querySelector('#dsec');
