@@ -40,7 +40,7 @@ document.querySelector('#ampm').innerHTML="Am";
 }
 else
 {
-document.queryselector('#ampm').innerHTML="Pm";
+document.querySelector('#ampm').innerHTML="Pm";
 }
 
 }, 1000);
