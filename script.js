@@ -27,7 +27,7 @@ setInterval(() =>
     let m = time.getMinutes();
     let s = time.getSeconds();
     let ampm = (hr < 12) ? "AM" : "PM";
-    hr = (hr < 12) ? hr % 12 : hr;
+    hr = (hr < 12) ? hr : hr % 12;
     m = (m < 10) ? "0" + m : m;
     s = (s < 10) ? "0" + s : s;
     
