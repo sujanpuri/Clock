@@ -16,7 +16,7 @@ setInterval(()=>
     document.querySelector("#ahrs").style.transform = "rotate("+ hRotate+ "deg)";
 
 
-}, 1000);
+}, 100);
 
 //digital clock
 setInterval(() => 
@@ -26,31 +26,14 @@ setInterval(() =>
     let hr = time.getHours();
     let m = time.getMinutes();
     let s = time.getSeconds();
-
-    let dhr= document.querySelector('#dhrs');
-    dhr.innerHTML= hr%12 + ":";
-    let dmn = document.querySelector('#dmin');
-    dmn.innerHTML= m + ":";
-    let dsc = document.querySelector('#dsec');
-    dsc.innerHTML= s
+    let ampm = (hr < 12) ? "AM" : "PM";
+    hr = (hr < 12) ? hr % 12 : hr;
+    m = (m < 10) ? "0" + m : m;
+    s = (s < 10) ? "0" + s : s;
     
-if(hr<12)
-{
-document.querySelector('#ampm').innerHTML="Am";
-}
-else
-{
-document.querySelector('#ampm').innerHTML="Pm";
-}
-
-if(m<=9)
-{
-document.querySelector('#dmin').innerHTML="0" +m+ ":";
-}
-
-if(s<=9)
-{
-document.querySelector('#dsec').innerHTML="0"+s;
-}
-
-}, 1000);
+    document.querySelector('#dhrs').innerHTML = hr + ":";
+    document.querySelector('#dmin').innerHTML = m + ":";
+    document.querySelector('#dsec').innerHTML = s;
+    document.querySelector("#ampm").innerHTML = ampm;
+    
+}, 100);
